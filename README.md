@@ -23,4 +23,15 @@ Le fichier d'inventaire définit les groupes et les hôtes de votre cluster. Voi
 192.168.0.3 
 
 [edge]
-192.168.0.4 
+192.168.0.4
+
+```
+## Commandes pour Exécuter les Playbooks
+1. Installation de Cloudera Manager et des Agents
+Exécutez la commande suivante pour installer Cloudera Manager et les agents sur les serveurs définis dans le fichier d'inventaire :
+
+```cloudera.yml
+ansible-playbook -i inventory.ini cloudera.yml
+```
+
+
