@@ -1,0 +1,43 @@
+nohup: les entrées sont ignorées
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-7.1.7-1.cdh7.1.7.p0.15945976/jars/log4j-slf4j-impl-2.13.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-7.1.7-1.cdh7.1.7.p0.15945976/jars/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+2024-09-02 12:02:23: Starting HiveServer2
+WARNING: Use "yarn jar" to launch YARN applications.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-7.1.7-1.cdh7.1.7.p0.15945976/jars/log4j-slf4j-impl-2.13.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/cloudera/parcels/CDH-7.1.7-1.cdh7.1.7.p0.15945976/jars/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 7f572b6f-faaf-43d4-bbb9-a1665f35794e
+Hive Session ID = 6af1ad55-c48f-4310-99cf-ac0b178686b7
+Hive Session ID = 8c469833-f1af-4118-93ab-eeb9ce2e6a01
+Hive Session ID = 765bb210-8217-4ff1-92f9-871a1ef7c791
+Hive Session ID = 0d8f580a-ca97-4465-af19-9775295e0a70
+Hive Session ID = 4115d6ce-851d-46c8-8270-1114884e1185
+Hive Session ID = 320e0523-2b89-4bbb-a0b7-a1acb4a2f2c1
+Hive Session ID = dc4669bd-7632-4559-81c5-18b914cc1461
+Hive Session ID = f15fa94e-08a6-45cc-b547-8c59a08597c0
+Hive Session ID = 1e74196e-9a8e-4e76-8b0c-fbf8224c4fe0
+Hive Session ID = 83273f28-41a1-4267-a2cf-6973aff7aa42
+Hive Session ID = 6242920c-e9e6-4356-b0b0-66ae9009314f
+Hive Session ID = 8c1910a2-7743-45b4-afc9-cc381502611a
+Hive Session ID = 485eb848-f69a-4b81-8bfb-60b7f92e4573
+Hive Session ID = 514cdab1-5603-41e0-9b5f-cb3c0a5f5792
+Hive Session ID = 9f2b65da-b432-4849-b582-86ad4d83593a
+Hive Session ID = 82dd4234-7f9a-44da-a2cd-67447d8fca7a
+Hive Session ID = c390605e-7793-4732-b11c-e804fc29f7c1
+Hive Session ID = f34925c9-a6ab-4c64-9ac8-f4866a0fdb65
+Hive Session ID = 5eefc62d-a141-4fe1-a260-bc8ec9da4968
+Hive Session ID = 1c0b3900-779a-43a5-8d01-1d81bd03b817
+Hive Session ID = 10d25e29-0ac2-4467-a7c9-2fb48370aab6
+Hive Session ID = 2b774c58-71e1-4593-9236-9ef229c134a1
+Hive Session ID = 4a741e92-45ee-4f6b-b80c-29086a84e696
+Hive Session ID = d18a639d-bfd2-4f70-912d-bade682c552e
+Hive Session ID = 45427001-87db-419f-9a70-c5ed3431ad8a
+Hive Session ID = 28786bb1-9746-4447-a82e-536f7c363b3a
+Hive Session ID = 541aa48d-8c93-4231-90dc-728adfbac4a3
+Hive Session ID = d50768d4-5e13-4efa-8c82-e87f17fd2578
+Hive Session ID = 299924d0-a853-4cd3-82fe-9211d2e5b9d4

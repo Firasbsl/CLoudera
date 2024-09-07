@@ -1,0 +1,55 @@
+---
+
+- hosts: cloudera_manager
+  become: yes
+  tasks:
+    - name: Attendre le démarrage du serveur Cloudera Manager
+      wait_for:
+        port: 7180
+        state: started
+        delay: 30
+        timeout: 300
+
+    - name: Lister les services existants
+      uri:
+        url: http://{{ inventory_hostname }}:7180/api/v40/clusters/Cluster%201/services
+        method: GET
+        user: admin
+        password: admin
+        headers:
+          Content-Type: "application/json"
+      register: existing_services
+
+    - name: Afficher les services existants
+      debug:
+        var: existing_services
+
+    - name: Configurer Cloudera services avec API
+      uri:
+        url: http://{{ inventory_hostname }}:7180/api/v40/clusters/Cluster%201/services
+        method: POST
+        user: admin
+        password: admin
+        headers:
+          Content-Type: "application/json"
+        body_format: json
+        body: |
+          {
+            "items": [
+              {"name": "HDFS", "type": "HDFS"},
+              {"name": "YARN", "type": "YARN"},
+              {"name": "HIVE", "type": "HIVE"},
+              {"name": "HUE", "type": "HUE"},
+              {"name": "SPARK", "type": "SPARK_ON_YARN"},
+              {"name": "ZOOKEEPER", "type": "ZOOKEEPER"},
+              {"name": "KAFKA", "type": "KAFKA"},
+              {"name": "TEZ", "type": "TEZ"},
+              {"name": "HIVE_ON_TEZ", "type": "HIVE_ON_TEZ"}
+            ]
+          }
+      register: result
+      ignore_errors: yes
+
+    - name: Vérifier la réponse de l'API Cloudera
+      debug:
+        var: result

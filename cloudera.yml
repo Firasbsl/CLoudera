@@ -1,0 +1,54 @@
+---
+
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install required packages
+    apt:
+        name: "{{ item }}"
+        state: present
+    with_items:
+        - curl
+        - wget
+        - openjdk-8-jdk
+        - ntp 
+
+  - name: Download Cloudera Manager repository list file
+    shell:
+      wget https://archive.cloudera.com/cm7/7.4.4/ubuntu1804/apt/cloudera-manager-trial.list -O /etc/apt/sources.list.d/cloudera-manager.list
+  - name: Add Cloudera GPG key
+    apt_key:
+      url: https://archive.cloudera.com/cm7/7.4.4/ubuntu1804/apt/archive.key
+    state: present
+  - name: Update apt cache
+    apt:
+      update_cache: yes
+
+  - name: Install Cloudera daemons
+    apt:
+     name: cloudera-manager-daemons
+     state: present
+  - name: Install Cloudera agent
+    apt:
+      name: cloudera-manager-agent
+      state: present
+
+  - name: Ensure Cloudera Agent is started and enabled at boot
+    systemd:
+      name: cloudera-scm-agent
+      state: started
+      enabled: yes
+
+- hosts: cloudera_manager
+  become: yes
+  tasks:
+  - name: Install Cloudera daemons
+    apt:
+      name: cloudera-manager-server
+      state: present
+
+  - name: Ensure Cloudera Server is started and enabled at boot
+    systemd:
+      name: cloudera-scm-server
+      state: started
+      enabled: yes
